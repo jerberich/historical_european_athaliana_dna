@@ -1,13 +1,12 @@
-
-## Setup and run Grenepipe
+# Historical European *A. thaliana* DNA processing
+## Setup and run Grenepipe QC
 
 | Name | Source |
 | ----------- | ----------- |
-| Grenepipe (v0.13.0) | [https://github.com/moiexpositoalonsolab/grenepipe/wiki](https://github.com/moiexpositoalonsolab/grenepipe/wiki) |
-| config.yaml | [code/config_historical.yaml](code/config_historical.yaml) |
-| Paragraph | Text |
+| config.yaml | [code/config_historical.yaml](../code/config_historical.yaml) |
 
-## Install Grenepipe
+
+### Install Grenepipe
 ```bash
 git clone https://github.com/moiexpositoalonsolab/grenepipe.git
 cd grenepipe
@@ -40,7 +39,7 @@ df <- rbind(df_1, df_2) %>%
 df %>% write_tsv('path/to/grenepipe/output/sample_table.tsv')
 ```
 
-Move config file and run grenepipe
+Move config file and run Grenepipe QC function
 ```bash
 cp config_historical.yaml /path/to/grenepipe/output/config.yaml
 
@@ -49,5 +48,9 @@ snakemake \
     --conda-prefix /path/to/grenepipe/output/conda-envs \
     --executor slurm \
     --profile /path/to/grenepipe/workflow/profiles/slurm/ \
-    --directory /gpath/to/grenepipe/output/
+    --directory /gpath/to/grenepipe/output/ \
+    all_qc
 ```
+On the computing clusters, grenepipe was ran in a tmux session--submitting jobs to the cluster's slurm workload manager which cluster-specific #SBATCH commands specified in the slurm profile.
+
+#### [Sequencing QC](02_sequencing_qc.md)
