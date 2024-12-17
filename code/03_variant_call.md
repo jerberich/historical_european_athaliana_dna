@@ -390,4 +390,4 @@ ggsave(filename = paste0(plot_file_path, 'pca_pre_filtering.png'),
 )                     
 ```
 
-#### [Pseudoage long-read sequencing for variant call QC](code/04_pseudoage_long_read_athaliana.md)
+#### [Pseudoage long-read sequencing for variant call QC](04_pseudoage_long_read_athaliana.md)

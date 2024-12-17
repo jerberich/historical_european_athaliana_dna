@@ -24,7 +24,6 @@ data:
   # ideally as it is provided by the GATK bundle.
   # Use an empty list or string instead, if there is no reference of known variants or if you
   # want to call variant without this guided approach. Path needs to be absolute, as above.
-  # formerally: "/Carnegie/DPB/Data/Shared/Labs/Moi/Everyone/1001g/vcf/1001genomes_snp-short-indel_only_ACGTN.vcf.gz"
   known-variants: ""
 
 
