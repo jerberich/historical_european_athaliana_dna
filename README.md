@@ -6,6 +6,7 @@ This repository describes the pipeline used to process the collection of histori
 
 
 ![Map of Western Europe and collection sites-colored by year](plots/historical_dna_geoposition.png)
+**Collection of herbarium A. thaliana accessions.** Temporal distribution of the samples colored by the year collected. Geographical distribution of samples colored by year collected. Circles are samples sequenced for this dataset. Triangles are previously sequenced in Latorre et al 2022. Fraction of nucleotides that underwent a C to T conversion by 5’ read position. This is a result of UV damage over time. Fragment ends are more likely to deaminate under UV radiation. Fraction of nucleotides deanimated on the 5’ 1st base by the collection year. Linear regression shows significant negative correlation between conversion fraction and year collected as expected as older samples underwent more UV radiation. Frequency of fragment size. Each sample’s distribution is represented by a line colored by year collected. Ultra short fragment size is a hallmark of historical DNA samples due to low quality storage and age-associated fragmentation of longer strands. Endogenous DNA fraction over collection year. Mean of 0.51 is represented by a dashed line. No correlation suggests that posthumous infections are not more likely with age and are sample specific.
 
 ## Analysis outline
 1. [Setup and run grenepipe](code/01_run_grenepipe.md)

@@ -329,6 +329,7 @@ ggsave(filename = paste0(plot_file_path, 'fragments.png'),
 ```
 #### Sequencing stats from final run
 ![Collection of sequencing statistics](../plots/sequencing_stats.png)
+**Sequencing statistics.** Total nucleotide basepairs (bp) sequenced per sample in collection. Cutoff of 1M bp does not remove any sample. Sequencing error rate per bp per sample in collection. Cutoff of 0.015 removes 4 samples. Error rate below 0.015 is consistent with illumina sequencing machines. Mapping rate per base pair per sample. Mapping rate per read per sample in collection. This is also used to interpret the endogenous fraction of A. thaliana DNA in sample. Fraction of reads deduplicated by DeDup. Fraction of forward and reverse reads that collapse in AdaptorRemoval. Average coverage of each sample calculated through BEDtools.
 
 ### Calculate repool concentrations
 Between rounds of sequencing, we used the sequencing statistics to guide how much of each sample to add to the pool based on it's DNA concentration, endogenous *A. thaliana* percentage, and remaining coverage needed to get to 9X. Since some samples had really low endogenous DNA, we pooled them separately so they wouldn't overload the sequencing run with non-*A. thaliana* DNA. Additionally, we wanted to be accurate in our pipetting and didn't want to consume the full library of any sample so we limited the pipet size volume to between 1µl and 3µl.
